@@ -2,32 +2,100 @@
 <html>
     <head>
         <title>Consultório de psicologia</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     </head>
     <body>
         <form name="anamnese" action="anamnese.txt" method="POST">
             <hr>
-                <p>id_Anamnese:<input type=text name="id" size="20"></p>
-                <p>id_Paciente:<input type=text name="id" size="20"></p>
-                <p>id_Piscologo:<input type=text name="id" size="20"></p>
-                <p>Queixas:<input type=text name="Queixas" size="30"></p>
-                <p>Sintomas:<input type=text name="Sin" size="20"></p>
-                <p>Tratamentos_anteriores:<input type=text name="trat" size="50"></p>
-                <p>Medicamentos:<input type=text name="Med" size="25"></p>
-                <p>Infancia:<input type=text name="Inf" size="20"></p>
-                <p>Rotina:<input type=text name="Rot" size="20"></p>
-                <p>Vicios:<input type=txt name="Vic" size="20"></p>
-                <p>Hobbies:<input type=text name="Hob" size="20"></p>
-                <p>Trabalho:<input type=text name="Tr" size="20"></p>
-                <p>Hitorico_familiar:<input type=text name="Histf" size="20"></p>
-                <p>Comportamento:<input type=txt name="Com" size="20"></p>
-                <p>Linguagem:<input type=txt name="Ling" size="20"></p>
-                <p>Humor:<input type=text name="Hum" size="20"></p>
-                <p>Hipotse_diagnosticada:<input type=text name="HD" size="20"></p>
-                <p>Observacoes:<input type=text name="Obse" size="20"></p>
-                <p>Numero_pessoas:<input type=txt name="NP" size="20"></p>
-                <p>Valor_sessao:<input type=text name="VS" size="20"></p>
-                <p>Periodicidade:<input type=txt name="Period" size="20"></p>
-                <input type=submit value="Enter">
+            <div class="form-group">
+                <label for="id_anamnese">ID da anamnese: </label>
+                <input type="number" class="form-control" name="id_anamnese" required size="15">
+            </div>
+            <div class="form-group">
+                <label for="id_paciente">ID do paciente: </label>
+                <input type="number" class="form-control" name="id_paciente" required size="15">
+            </div>
+            <div class="form-group">
+                <label for="id_psicologo">ID do psicologo: </label>
+                <input type="number" class="form-control" name="id_psicologo" required size="15">
+            </div>
+            <div class="form-group">
+            <label for="queixas">Queixas do paciente: </label>
+                <input type="text" class="form-control" name="queixas" size="100">
+            </div>
+            <div class="form-group">
+                <label for="sintomas">Sintomas do paciente: </label>
+                <input type="text" class="form-control" name="sintomas" required size="50">
+            </div>
+            <div class="form-group">
+                <label for="trat_anteriores">Tratamentos anteriores do paciente: </label>
+                <input type="text" class="form-control" name="trat_anteriores"  size="100">
+            </div>
+            <div class="form-group">
+                <label for="medicamentos">Medicamentos usados: </label>
+                <input type="text" class="form-control" name="medicamentos" required size="50">
+            </div>
+            <div class="form-group">
+                <label for="infancia">Infância do paciente: </label>
+                <input type="text" class="form-control" name="infancia" size="20">
+            </div>
+            <div class="form-group">
+                <label for="rotina">Rotina do paciente: </label>
+                <input type="text" class="form-control" name="rotina" size="100">
+            </div>
+            <div class="form-group">
+                <label for="vicios">Vícios do paciente: </label>
+                <input type="text" class="form-control" name="vicios" size="50">
+            </div>
+            <div class="form-group">
+                <label for="hobbies">Hobbies do paciente: </label>
+                <input type="text" class="form-control" name="hobbies" size="50">
+            </div>
+            <div class="form-group">
+                <label for="trabalho">Trabalho do paciente: </label>
+                <input type="text" class="form-control" name="trabalho" size="35">
+            </div><div class="form-group">
+                <label for="hist_familiar">Histórico familiar do paciente: </label>
+                <input type="text" class="form-control" name="hist_familiar" size="200" required>
+            </div>
+            <div class="form-group">
+                <label for="comportamento">Comportamento do paciente: </label>
+                <input type="text" class="form-control" name="comportamento" size="50">
+            </div>
+            <div class="form-group">
+                <label for="linguagem">Linguagem do paciente: </label>
+                <input type="text" class="form-control" name="linguagem" size="50">
+            </div>
+            <div class="form-group">
+                <label for="humor">Humor do paciente: </label>
+                <input type="text" class="form-control" name="humor" size="50">
+            </div>
+            <div class="form-group">
+                <label for="Hipotse_diagnosticada">Hipotse de diagnostíco do paciente: </label>
+                <input type="text" class="form-control" name="Hipotse_diagnosticada" size="100">
+            </div>
+            <div class="form-group">
+                <label for="obs">Observações: </label>
+                <textarea class="form-control" id="obs" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="num_sessoes">Número de sessões do paciente: </label>
+                <input type="number" class="form-control" name="num_sessoes">
+            </div>
+            <div class="form-group">
+                <label for="valor_sessao">Valor da sessão: </label>
+                <input type="number" class="form-control" name="valor_sessao">
+            </div>
+            <div class="form-group">
+                <label for="periodicidade">periodicidade das sessões: </label>
+                <input type="text" class="form-control" name="periodicidade" size="25" placeholder="Uma vez por semana">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
             <hr>
         </form>
     </body>
