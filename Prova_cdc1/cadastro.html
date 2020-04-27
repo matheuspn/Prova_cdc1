@@ -1,0 +1,26 @@
+<!doctype html5>
+<html>
+        <head><title>Consultório de psicologia</title>
+    </head>
+    <body>
+        <form method="POST" action="cadastros.txt">
+            <hr>
+                <p>id_Paciente:<input type=text name="id" size="20"></p>
+                <p>Nome:<input type=text name="nome" size="20" maxlenght="50"></p>
+                <p>CPF:<input type=text name="CPF" size="20"></p>
+                <p>Data_de_nascimento:<input type=text name="Dat" size="10"></p>
+                <p>Sexo:<br>
+                <input type=radio name="mas">masculino<br>
+                <input type=radio name="fem">feminino</p>
+                <p>Endereco:<input type=text name="End" size="30"></p>
+                <p>Telefone:<input type=text name="Tel" size="10"></p>
+                <p>Data_de_cadrastro:<input type=text name="cadr" size="10"></p>
+                <p>Plano_de_saude:<br>
+                <input type=radio name="uni">unimed<br>
+                <input type=radio name="gold">golden cross</p> 
+                <p>Observacoes:</p><textarea name="obs" rows="2" cols="40"></textarea>
+                <input type=submit value="Enviar"><input type=reset value="limpar">
+            <hr>
+        </form>
+    </body>
+</html>
