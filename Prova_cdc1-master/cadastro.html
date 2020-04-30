@@ -1,0 +1,86 @@
+<!doctype html5>
+<html>
+        <head><title>Consultório de psicologia</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body style="background: rgb(6, 209, 202)">
+        <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-0 bg-white border-bottom shadow-sm" >
+            <img src="img/prancheta.png" width="30" height="30" class="d-inline-block left-top" >
+              <h5 class="my-2 mr-md-auto ">Consultório psicológico</h5>
+              <a class="btn btn-light" href="pagina_inicial.html">Pagina inicial</a>
+              <a class="btn btn-light" href="login.html">Login</a>
+              <a class="btn btn-light" href="cadastro.html">pacientes</a>
+              <a class="btn btn-light" href="psicologo.html">psicologos</a>
+              <a class="btn btn-light" href="sessao.html">sessões</a>
+              <a class="btn btn-light" href="anamnese.html">anamnese</a>
+              <a class="btn btn-light" href="">Contato</a>
+              <a class="btn btn-light" href="">Quem nós somos</a>
+                </div>
+              <br>
+        <div class="container" style="background: rgb(169, 245, 242)">
+            <h1>Cadastro de paciente</h1>
+            <form method="POST" action="pagina_inicial.html">
+                <div class="form-group">
+                    <label for="id_paciente">ID do paciente: </label>
+                    <input type="text" class="form-control" name="id_paciente" required size="20">
+                </div>
+                <div class="form-group">
+                    <label for="nome_paciente">Nome: </label>
+                    <input type="text" class="form-control" name="nome_paciente" required size="50">
+                </div>
+                <div class="form-group">
+                    <label for="cpf">CPF: </label>
+                    <input type="text" class="form-control" name="cpf" required size="11" aria-describedby="cpf_help">
+                    <small id="cpf_help" class="form-text text-muted">Somente números</small>
+                </div>
+                <div class="form-group">
+                    <label for="data_nasc">Data de nascimento: </label>
+                    <input type="date" class="form-control" name="data_nasc" required>
+                </div>
+                <div class="form-group">
+                    <label for="sexo">Sexo:</label>
+                    <select class="form-control" id="sexo">
+                        <option>Masculino</option>
+                        <option>Feminino</option>
+                        <option>Prefiro não informar</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="endereco">Endereço: </label>
+                    <input type="text" class="form-control" name="endereco" size="100">
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone: </label>
+                    <input type="text" class="form-control" name="telefone" size="15" placeholder="+55 (21) 91234-9876">
+                </div>
+                <div class="form-group">
+                    <label for="data_cad">Data de cadastro: </label>
+                    <input type="date" class="form-control" name="data_cad">
+                </div>
+                <div class="form-group">
+                    <label for="plano_saude">Plano de saúde:</label>
+                    <select class="form-control" id="plano_saude">
+                        <option>Unimed</option>
+                        <option>Amil</option>
+                        <option>Golden Cross</option>
+                        <option>Não possui</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="obs">Observações: </label>
+                    <textarea class="form-control" id="obs" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Foto do paciente</label>
+                    <input type="file" class="form-control-file" id="foto_paciente">
+                  </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>   
+    </body>
+</html>
